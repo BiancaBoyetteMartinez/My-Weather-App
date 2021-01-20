@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+
+body {
+  margin-top: 50px;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  font-family: "Raleway", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: white;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+h2 {
+  margin-top: 60px;
+  margin-bottom: 0;
+}
+
+.todays-weather {
+  line-height: 30px;
+  color: white;
+  list-style: none;
+}
+
+.forecast-day {
+  font-size: 20px;
+}
+
+.temp {
+  font-size: 35px;
+}
+
+.forecast-day,
+.temp {
+  color: white;
+  text-align: center;
+}
+
+.weather-icon {
+  text-align: center;
+  font-size: 50px;
+}
+
+.fa-cloud {
+  font-size: 90px;
+  color: white;
+}
+
+.forecast-title {
+  color: white;
+  font-size: 25px;
+}
