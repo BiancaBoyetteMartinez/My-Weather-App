@@ -1,48 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
 
 body {
+  margin-top: 50px;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
   font-family: "Raleway", sans-serif;
-  margin: 0;
-  color: #ffffff;
 }
 
-.background-image {
-  background: url(../IMG/weatherappbackground.jpg) no-repeat center center/cover;
-  height: 100vh;
-  position: relative;
+h1,
+h2,
+h3 {
+  color: white;
 }
 
 h1 {
   font-size: 100px;
 }
 
-h2 {
-  margin-top: 60px;
-  margin-bottom: 0;
-  font-size: 65px;
-}
-
-p {
-  text-align: center;
-  margin: auto 0;
+h3 {
   font-size: 35px;
 }
 
-a {
-  text-decoration: none;
-  font-size: 25px;
-  text-align: center;
-  color: white;
-}
-
-a:hover {
-  cursor: pointer;
-  color: purple;
+h2 {
+  margin-top: 60px;
+  margin-bottom: 0;
 }
 
 .todays-weather {
+  line-height: 30px;
+  color: white;
   list-style: none;
-  font-size: 25px;
 }
 
 .forecast-day {
@@ -64,17 +50,12 @@ a:hover {
   font-size: 50px;
 }
 
-.box-weather-conditions {
-  background-color: rgba(255, 255, 255, 0.3);
-  max-width: 60%;
-  height: 150px;
+.fa-cloud {
+  font-size: 90px;
+  color: white;
 }
 
-.box-forecast {
-  background-color: rgba(255, 255, 255, 0.3);
-  height: 180px;
-}
-
-.future-forecast {
-  padding: 20px;
+.forecast-title {
+  color: white;
+  font-size: 25px;
 }
