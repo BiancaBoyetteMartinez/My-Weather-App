@@ -28,6 +28,20 @@ p {
   font-size: 35px;
 }
 
+form {
+  padding: 15px;
+}
+
+.search-bar {
+  border-radius: 12px;
+}
+
+.button {
+  padding: 5px;
+  color: white;
+  background: #e6b2d2;
+}
+
 a {
   text-decoration: none;
   font-size: 25px;
