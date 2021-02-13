@@ -34,12 +34,10 @@ form {
 
 .search-bar {
   border-radius: 12px;
-}
-
-.button {
-  padding: 5px;
-  color: white;
-  background: #e6b2d2;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
 }
 
 a {
