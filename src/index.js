@@ -24,10 +24,13 @@ function displayTemp(response) {
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
   );
+ 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+  
+   document.querySelector("#city-condition").innerHTML = response.data.weather[0].main; 
 }
 
 function search(event) {
@@ -38,6 +41,8 @@ function search(event) {
   let units = "imperial";
   let apiUrl = `${apiEndpoint}${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayTemp);
+ 
+
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
