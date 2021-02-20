@@ -21,16 +21,11 @@ h3.innerHTML = `${day} ${hours}:${minutes}`;
 
 function displayTemp(response) {
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
- 
+  document.querySelector("#temp").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#city-condition").innerHTML = response.data.weather[0].main; 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-  
-   document.querySelector("#city-condition").innerHTML = response.data.weather[0].main; 
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
+ document.querySelector("#precipitation").innerHTML = Math.round(response.data.rain['1h']); 
 }
 
 function search(event) {

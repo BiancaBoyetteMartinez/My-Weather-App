@@ -2,6 +2,7 @@
 
 body {
   font-family: "Raleway", sans-serif;
+
   color: #ffffff;
 }
 
@@ -15,7 +16,7 @@ h1 {
   font-size: 100px;
 }
 
-h2 {
+#city {
   margin-top: 15px;
   margin-bottom: 0;
   font-size: 65px;
@@ -88,4 +89,10 @@ a:hover {
 
 .future-forecast {
   padding: 20px;
+}
+
+#temp,
+.fa-cloud {
+  font-size: 75px;
+  padding: 15px;
 }
