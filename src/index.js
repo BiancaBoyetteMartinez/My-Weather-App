@@ -19,13 +19,18 @@ let day = days[now.getDay()];
 let h3 = document.querySelector("h3");
 h3.innerHTML = `${day} ${hours}:${minutes}`;
 
+
 function displayTemp(response) {
+ 
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temp").innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#city-condition").innerHTML = response.data.weather[0].main; 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
  document.querySelector("#precipitation").innerHTML = Math.round(response.data.rain['1h']); 
+ 
+ let iconElement = document.querySelector("#icon"); 
+ iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}2x.png`); 
 }
 
 function search(event) {
