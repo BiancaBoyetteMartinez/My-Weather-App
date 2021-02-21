@@ -12,14 +12,16 @@ body {
   position: relative;
 }
 
-h1 {
-  font-size: 100px;
-}
-
 #city {
   margin-top: 15px;
   margin-bottom: 0;
   font-size: 65px;
+}
+
+.units {
+  position: relative;
+  font-size: 30px;
+  top: -32px;
 }
 
 p {
