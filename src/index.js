@@ -21,17 +21,19 @@ h3.innerHTML = `${day} ${hours}:${minutes}`;
 
 
 function displayTemp(response) {
- 
+
+  fahrenheitTemperature = response.data.main.temp; 
+  let iconElement = document.querySelector("#icon"); 
+
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temp").innerHTML = Math.round(response.data.main.temp);
+  document.querySelector("#temp").innerHTML = Math.round(fahrenheitTemperature);
   document.querySelector("#city-condition").innerHTML = response.data.weather[0].main; 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
- document.querySelector("#precipitation").innerHTML = Math.round(response.data.rain['1h']); 
- 
- let iconElement = document.querySelector("#icon"); 
- iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}2x.png`); 
-}
+  document.querySelector("#precipitation").innerHTML = Math.round(response.data.rain['1h']); 
+  iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}2x.png`); 
+
+  }
 
 function search(event) {
   event.preventDefault();
@@ -44,5 +46,27 @@ function search(event) {
  
 
 }
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let celsiusTemperature = (fahrenheitTemperature-32) / 1.8; 
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+
+}
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  fahrenheit.classList.add("active");
+  celsius.classList.remove("active");
+  let temperatureElement = document.querySelector("#temp");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheitTemperature = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
