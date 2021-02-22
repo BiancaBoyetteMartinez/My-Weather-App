@@ -31,7 +31,6 @@ function displayTemp(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
   iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
-  document.querySelector("#precipitation").innerHTML = Math.round(response.data.rain['1h']); 
   }
 
 function search(event) {

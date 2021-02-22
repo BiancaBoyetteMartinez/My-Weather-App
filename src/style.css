@@ -16,6 +16,13 @@ body {
   margin-top: 15px;
   margin-bottom: 0;
   font-size: 65px;
+  transition: 3s;
+}
+
+#city,
+h3,
+h4 {
+  margin-left: 50px;
 }
 
 .units {
@@ -44,7 +51,7 @@ form {
 
 a {
   text-decoration: none;
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
   color: white;
 }
@@ -59,42 +66,13 @@ a:hover {
   font-size: 25px;
 }
 
-.forecast-day {
-  font-size: 20px;
-}
-
-.temp {
-  font-size: 35px;
-}
-
-.forecast-day,
-.temp {
-  color: white;
-  text-align: center;
-}
-
-.weather-icon {
-  text-align: center;
-  font-size: 50px;
-}
-
 .box-weather-conditions {
   background-color: rgba(255, 255, 255, 0.3);
   max-width: 60%;
   height: 150px;
 }
 
-.box-forecast {
-  background-color: rgba(255, 255, 255, 0.3);
-  height: 180px;
-}
-
-.future-forecast {
-  padding: 20px;
-}
-
-#temp,
-.fa-cloud {
+#temp {
   font-size: 75px;
   padding: 15px;
 }
